@@ -1,10 +1,13 @@
 # Дано двузначное число. Вывести число, полученное при перестановке цифр исходного числа.
-number = int(input("Введите двузначное число: "))
+try:
+    number = int(input("Введите двузначное число: "))
 
-tens = number // 10
+    tens = number // 10
 
-units = number % 10
+    units = number % 10
 
-new_number = units * 10 + tens
+    new_number = units * 10 + tens
 
-print("Число после перестановки цифр:", new_number)
+    print("Число после перестановки цифр:", new_number)
+except ValueError:
+    print("Ошибка")
