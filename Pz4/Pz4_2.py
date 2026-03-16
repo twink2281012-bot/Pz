@@ -1,18 +1,25 @@
 # Дано целое число N (> 1). Вывести наименьшее из целых чисел K, для которых
 # сумма 1 + 2 + . . . + K будет больше или равна N, и саму эту сумму.
 
-N = int(input("Введите целое число N (>1): "))
+try:
+    N = int(input("Введите целое число N (>1): "))
 
-if N <= 1:
-    print("Ошибка: N должно быть больше 1!")
-else:
-    K = 0
-    summa = 0
+    if N <= 1:
+        print("Ошибка: N должно быть больше 1!")
+    else:
+        K = 0
+        summa = 0
 
-    while summa < N:
-        K = K + 1
-        summa = summa + K
-        print(f"K={K}, сумма={summa}")
+        while summa < N:
+            K = K + 1
+            summa = summa + K
+            print(f"K={K}, сумма={summa}")
+
+        print(f"Наименьшее K: {K}")
+        print(f"Сумма 1+2+...+{K} = {summa}")
+        print(f"Эта сумма больше или равна {N}")
+except ValueError:
+    print("Некоректные данные")
 
     print(f"Наименьшее K: {K}")
     print(f"Сумма 1+2+...+{K} = {summa}")
