@@ -3,22 +3,26 @@
 # порядке возрастания номеров): A2, A4, А6, . . ., A1, A3, A5, ... . Условный оператор не
 # использовать.
 
-N = int(input("Введите размер списка N: "))
-A = []
+try:
+    N = int(input("Введите размер списка N: "))
+    A = []
 
-print("Введите элементы списка:")
-for i in range(N):
-    x = int(input(f"A[{i}] = "))
-    A.append(x)
+    print("Введите элементы списка:")
+    for i in range(N):
+        x = int(input(f"A[{i}] = "))
+        A.append(x)
 
-print("\nИсходный список:", A)
+    print("\nИсходный список:", A)
 
-result = []
+    result = []
 
-for i in range(1, N, 2):
-    result.append(A[i])
+    for i in range(1, N, 2):
+        result.append(A[i])
 
-for i in range(0, N, 2):
-    result.append(A[i])
+    for i in range(0, N, 2):
+        result.append(A[i])
 
-print("Результат:", result)
+    print("Результат:", result)
+
+except ValueError:
+    print("Ошибка: введено некорректное значение. Ожидалось целое число.")
