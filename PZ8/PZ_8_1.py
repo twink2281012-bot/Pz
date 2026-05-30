@@ -10,9 +10,4 @@ min_value = sample_dict[min_key]
 
 print(f"Ключ с минимальным значением: '{min_key}' = {min_value}")
 
-print("\nПоиск минимального значения:")
-for key, value in sample_dict.items():
-    if value == min_value:
-        print(f"  Минимум: {key} = {value}")
-
 print("\n" + "-" * 40)
